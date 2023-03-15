@@ -9,9 +9,20 @@ obj.meta
 .bin
 .download
 .[Ee]ditor
+/[Uu]ser[Ss]ettings/
 .UnityLauncher.Editor
 .vs
-.vscode
+# Visual Studio Code settings
+.vscode/*
+!.vscode/.cspell
+.vscode/.cspell/*
+!.vscode/.cspell/project.txt
+!.vscode/.cspell/unity.txt
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
 
 .DS_Store
 *.app
