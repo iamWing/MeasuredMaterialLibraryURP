@@ -11,10 +11,10 @@
 ///////////////////////////////////////////////////////////////////////////////
 //                         BRDF Functions                                    //
 ///////////////////////////////////////////////////////////////////////////////
-#ifdef _CLEARCOAT
-    #define CLEAR_COAT_IOR 1.5h
-    #define CLEAR_COAT_IETA (1.0h / CLEAR_COAT_IOR) // IETA is the inverse eta which is the ratio of IOR of two interface
-#endif
+// #ifdef _CLEARCOAT
+//     #define CLEAR_COAT_IOR 1.5h
+//     #define CLEAR_COAT_IETA (1.0h / CLEAR_COAT_IOR) // IETA is the inverse eta which is the ratio of IOR of two interface
+// #endif
 
 half3 f0ClearCoatToSurface(half3 f0) 
 {
