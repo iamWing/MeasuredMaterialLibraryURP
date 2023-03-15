@@ -1,7 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEditor.Rendering.LWRP;
 using UnityEditor;
 
 namespace kTools.kShadingEditor
@@ -19,7 +17,7 @@ namespace kTools.kShadingEditor
         }
 
         // material changed check
-        public override void MaterialChanged(Material material)
+        public override void ValidateMaterial(Material material)
         {
             if (material == null)
                 throw new ArgumentNullException("material");
@@ -45,7 +43,7 @@ namespace kTools.kShadingEditor
             if (EditorGUI.EndChangeCheck())
             {
                 foreach (var obj in blendModeProp.targets)
-                    MaterialChanged((Material)obj);
+                    ValidateMaterial((Material)obj);
             }
             base.DrawSurfaceOptions(material);
         }
@@ -127,7 +125,7 @@ namespace kTools.kShadingEditor
                     material.SetTexture("_MetallicSpecGlossMap", texture);
             }
 
-            MaterialChanged(material);
+            ValidateMaterial(material);
         }
     }
 }
